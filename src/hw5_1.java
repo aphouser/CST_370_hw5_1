@@ -1,3 +1,12 @@
+/*
+ * HackerRank link:https://www.hackerrank.com/contests/cst370-su20-hw5/challenges/divide-and-conquer-max/submissions/code/1323817338
+ * Title: hw5_1.java
+ * Abstract: Displays largest number in an array using divide and conquer recursive algorithm
+ * Author: Adam Houser
+ * ID: 1144
+ * Date: 5/24/2020
+ */
+
 import java.util.Scanner;
 
 public class hw5_1 {
@@ -20,17 +29,17 @@ public class hw5_1 {
 
         in.close();
 
-        System.out.println(div(nums, 0, nums.length));
+        System.out.println(div(nums, 0, nums.length-1));
     }
 
     public static int div(int[] input, int start, int end) {
         // if the input is 2 numbers, return the larger
-        if (end - start == 2) {
+        if (end - start == 1) {
             return Math.max(input[start], input[end]);
         }
 
         // if the input is only 1, return that number
-        else if (end - start == 1) {
+        else if (end - start == 0) {
             return input[start];
         }
 
